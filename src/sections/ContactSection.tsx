@@ -132,7 +132,7 @@ export function ContactSection() {
         {/* Footer */}
         <footer className="mt-20 pt-6 border-t border-[rgba(100,255,218,0.1)] text-center">
           <p className="font-mono-terminal text-xs text-[#8892B0]">
-            © 2025 Mveng Mballa Julien Cedric. Built with React, Three.js &amp; passion.
+            © 2026 Mveng Mballa Julien Cedric. Built with React, Three.js &amp; passion.
           </p>
           <div className="flex items-center justify-center gap-6 mt-4">
             <a

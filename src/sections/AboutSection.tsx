@@ -84,7 +84,7 @@ export function AboutSection() {
           {/* Left Column — Photo + Stats */}
           <div ref={photoRef} className="relative opacity-0">
             <img
-              src="/assets/profile-photo.jpg"
+              src="/assets/profile-photo.png"
               alt="Mveng Mballa Julien Cedric"
               className="w-full max-w-[400px] mx-auto lg:mx-0 rounded-xl object-cover aspect-[3/4]"
               style={{ boxShadow: '0 0 60px rgba(26,86,219,0.15)' }}
