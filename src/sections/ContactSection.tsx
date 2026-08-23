@@ -8,7 +8,6 @@ import {
   Github, 
   Mail, 
   Phone, 
-  MapPin, 
   Send, 
   Copy, 
   Check, 
