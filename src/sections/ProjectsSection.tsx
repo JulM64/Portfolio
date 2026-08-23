@@ -29,7 +29,8 @@ export const projectsData: ProjectDetail[] = [
     ],
     tags: ['AWS Lambda', 'Amazon S3', 'DynamoDB', 'AWS Cognito', 'AWS CDK', 'React', 'TypeScript'],
     image: '/assets/cloudly-app.jpg',
-    link: 'https://github.com/JulM64/cloudly-app',
+    link: 'https://gentle-caramel-73a129.netlify.app/login',
+    demoUrl: 'https://gentle-caramel-73a129.netlify.app/login',
   },
   {
     title: 'Secure Cloud Deployment',

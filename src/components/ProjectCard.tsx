@@ -125,26 +125,27 @@ export function ProjectCard({ project, index, onOpenModal }: ProjectCardProps) {
         </button>
 
         <div className="flex items-center gap-2">
-          {project.link && (
+          {project.link && project.link.includes('github.com') && (
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              title="GitHub Repo"
+              title="GitHub Repository"
               className="p-2 rounded-xl bg-slate-800/60 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition-all"
             >
               <Github className="w-4 h-4" />
             </a>
           )}
-          {project.demoUrl && (
+          {(project.demoUrl || (project.link && !project.link.includes('github.com'))) && (
             <a
-              href={project.demoUrl}
+              href={project.demoUrl || project.link}
               target="_blank"
               rel="noopener noreferrer"
-              title="Live Demo"
-              className="p-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-[0_0_15px_rgba(0,242,254,0.3)] transition-all hover:scale-105"
+              title="Live Web Application"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-mono-terminal text-xs font-semibold shadow-[0_0_15px_rgba(0,242,254,0.3)] transition-all hover:scale-105"
             >
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>Live App</span>
             </a>
           )}
         </div>

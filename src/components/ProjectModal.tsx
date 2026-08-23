@@ -147,7 +147,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         {/* Footer Actions */}
         <div className="p-6 border-t border-slate-800 bg-slate-950/60 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            {project.link && (
+            {project.link && project.link.includes('github.com') && (
               <a
                 href={project.link}
                 target="_blank"
@@ -158,15 +158,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <span>GitHub Repository</span>
               </a>
             )}
-            {project.demoUrl && (
+            {(project.demoUrl || (project.link && !project.link.includes('github.com'))) && (
               <a
-                href={project.demoUrl}
+                href={project.demoUrl || project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all shadow-[0_0_20px_rgba(0,242,254,0.3)]"
               >
                 <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
+                <span>Live Web Application</span>
               </a>
             )}
           </div>
