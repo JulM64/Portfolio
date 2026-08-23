@@ -10,24 +10,44 @@ const timelineItems = [
   {
     date: 'Oct 2024 – Feb 2025',
     title: 'AWS Solutions Architect – Associate',
-    institution: 'Adacorp (Online)',
+    institution: 'Adacorp / Amazon Web Services (Online)',
     description:
-      'Specialization in cloud architectures, AWS security, VPC, IAM, serverless solutions, and cloud engineering best practices.',
+      'Rigorous specialization in designing secure, highly available, fault-tolerant, and cost-efficient cloud architectures on AWS. Deep coverage of VPC networking, IAM security governance, serverless ecosystems, asynchronous event processing, and AWS CDK automation.',
+    highlights: [
+      'Multi-tier VPC isolation & Security Group / NACL rules',
+      'AWS Lambda, API Gateway, S3, DynamoDB Serverless Architecture',
+      'AWS KMS encryption, AWS WAF, and Amazon GuardDuty implementation',
+      'High-availability multi-AZ deployment & disaster recovery strategies',
+    ],
     credentialLink: 'https://aws.amazon.com/verification',
+    isVerified: true,
   },
   {
     date: '2017 – 2020',
     title: 'Bachelor of Engineering Sciences – Telecom Engineering',
-    institution: 'UPAC Cameroon',
+    institution: 'UPAC Cameroon (Université Protestante d\'Afrique Centrale)',
     description:
-      'Advanced training in computer networks, telecommunications, IP protocols, digital systems, electronics, transmission, and telecom infrastructure.',
+      'Comprehensive engineering degree covering telecommunications infrastructure, computer networking, IP protocols (TCP/IP, routing, switching), electronics, digital transmission systems, and signal processing fundamentals.',
+    highlights: [
+      'Advanced computer networks, VLAN, DHCP, DNS, and IP routing',
+      'GSM, LTE, and radio access network (RAN) architecture modeling',
+      'Transmission media, fiber optics, and digital communication systems',
+      'Graduated with strong analytical and engineering foundation',
+    ],
+    isVerified: true,
   },
   {
     date: '2017',
-    title: 'Baccalauréat D (Scientific Baccalaureate)',
+    title: 'Scientific Baccalaureate (Baccalauréat Série D)',
     institution: 'Institut Polyvalent du Succès, Cameroon',
     description:
-      'Strong scientific foundation (mathematics, physics, life sciences) oriented toward engineering.',
+      'Rigorous scientific curriculum emphasizing advanced mathematics, physics, chemistry, and life sciences oriented toward engineering studies.',
+    highlights: [
+      'Advanced Mathematics & Calculus',
+      'Physics, Electronics & Classical Mechanics',
+      'Scientific Methodology & Problem Solving',
+    ],
+    isVerified: true,
   },
 ];
 
@@ -54,23 +74,30 @@ export function EducationSection() {
   }, []);
 
   return (
-    <section id="education" className="w-full bg-[#0F1629] py-24 md:py-32">
-      <div className="max-w-[900px] mx-auto px-4 md:px-10">
+    <section id="education" className="w-full bg-[#080B14] py-24 md:py-32 relative">
+      {/* Background glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-[160px] rounded-full pointer-events-none" />
+
+      <div className="max-w-[1000px] mx-auto px-4 md:px-10 relative z-10">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-12 md:mb-16 opacity-0">
-          <SectionLabel text="QUALIFICATIONS" />
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-white leading-tight tracking-[-0.01em]">
-            Certifications &amp; Education
+        <div ref={headerRef} className="text-center mb-16 opacity-0">
+          <SectionLabel text="VERIFIED QUALIFICATIONS & EDUCATION" />
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-[-0.02em]">
+            Certifications &amp; Academic Background
           </h2>
+          <p className="text-base md:text-lg text-slate-300 mt-4 leading-relaxed max-w-[600px] mx-auto">
+            Official cloud architecture certifications and formal engineering degrees forming a strong foundation in modern technology.
+          </p>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline Container */}
         <div className="relative">
-          {/* Timeline Line */}
+          {/* Glowing Vertical Line */}
           <div
-            className="absolute left-[30px] top-0 bottom-0 w-[2px]"
+            className="absolute left-[13px] md:left-[17px] top-4 bottom-4 w-[2px] -translate-x-1/2"
             style={{
-              background: 'linear-gradient(180deg, #1A56DB, #64FFDA)',
+              background: 'linear-gradient(180deg, #00F2FE 0%, #3B82F6 50%, #10B981 100%)',
+              boxShadow: '0 0 15px rgba(0,242,254,0.4)',
             }}
           />
 
